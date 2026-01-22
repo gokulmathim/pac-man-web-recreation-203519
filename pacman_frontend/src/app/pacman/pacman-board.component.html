@@ -1,0 +1,78 @@
+<div class="page">
+  <header class="hud">
+    <div class="brand">
+      <div class="logo">PAC</div>
+      <div class="title">
+        <div class="name">Pac‑Man Web</div>
+        <div class="hint">Arrows/WASD move • P pause • R restart</div>
+      </div>
+    </div>
+
+    <div class="stats" aria-label="Game stats">
+      <div class="stat">
+        <div class="label">Score</div>
+        <div class="value">{{ engine.getSnapshot().score }}</div>
+      </div>
+      <div class="stat">
+        <div class="label">Lives</div>
+        <div class="value">{{ engine.getSnapshot().lives }}</div>
+      </div>
+      <div class="stat">
+        <div class="label">Level</div>
+        <div class="value">{{ engine.getSnapshot().level }}</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" type="button" (click)="onStartClick()">Start/Resume</button>
+      <button class="btn secondary" type="button" (click)="engine.togglePause()">Pause</button>
+      <button class="btn secondary" type="button" (click)="resetGame()">Restart</button>
+      <button class="btn ghost" type="button" (click)="toggleSound()">
+        Sound: {{ soundEnabled ? 'On' : 'Off' }}
+      </button>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="gameCard" aria-label="Pac-Man game board">
+      <canvas #gameCanvas class="canvas" role="img" aria-label="Pac-Man maze"></canvas>
+    </section>
+
+    <aside class="sideCard">
+      <div class="panelTitle">High Scores</div>
+
+      <div class="backendBadge" [class.ok]="backendStatus === 'ok'" [class.down]="backendStatus === 'down'">
+        Backend: {{ backendStatus }}
+      </div>
+
+      <label class="field">
+        <span class="fieldLabel">Name</span>
+        <input class="input" [(ngModel)]="playerName" placeholder="Player" />
+      </label>
+
+      <div class="scores" *ngIf="highscores.length > 0; else emptyScores">
+        <div class="scoreRow" *ngFor="let hs of highscores; let i = index">
+          <div class="rank">#{{ i + 1 }}</div>
+          <div class="who">{{ hs.player_name }}</div>
+          <div class="pts">{{ hs.score }}</div>
+          <div class="lvl">L{{ hs.level }}</div>
+        </div>
+      </div>
+
+      <ng-template #emptyScores>
+        <div class="muted">
+          No high scores yet (or backend unavailable). The game still runs fully in the browser.
+        </div>
+      </ng-template>
+
+      <div class="tips">
+        <div class="tipTitle">Tips</div>
+        <ul>
+          <li>Eat pellets to frighten ghosts.</li>
+          <li>Clear all dots to advance a level.</li>
+          <li>Try not to get cornered.</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+</div>

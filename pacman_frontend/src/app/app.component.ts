@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { PacmanBoardComponent } from './pacman/pacman-board.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [PacmanBoardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'pacman_frontend is being generated';
-}
+export class AppComponent {}

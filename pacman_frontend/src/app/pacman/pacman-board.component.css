@@ -1,0 +1,258 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.10), rgba(249, 250, 251, 1));
+  color: #111827;
+  padding: 18px 16px 28px;
+}
+
+.hud {
+  max-width: 1100px;
+  margin: 0 auto 14px;
+  padding: 14px 14px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #3B82F6;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.title .name {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.title .hint {
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.65);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  border-radius: 12px;
+  padding: 10px 10px;
+}
+
+.stat .label {
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.65);
+}
+
+.stat .value {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #3B82F6;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: rgba(17, 24, 39, 0.06);
+  color: #111827;
+}
+
+.btn.ghost {
+  background: rgba(168, 85, 247, 0.12);
+  color: #111827;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(34, 197, 94, 0.55);
+  outline-offset: 2px;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 14px;
+  align-items: start;
+}
+
+.gameCard {
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  place-items: center;
+}
+
+.canvas {
+  width: 100%;
+  height: auto;
+  max-width: 760px;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: #0B1020;
+}
+
+.sideCard {
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.panelTitle {
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.backendBadge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(17, 24, 39, 0.04);
+}
+
+.backendBadge.ok {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.backendBadge.down {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.fieldLabel {
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.65);
+}
+
+.input {
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.14);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.scores {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.scoreRow {
+  display: grid;
+  grid-template-columns: 44px 1fr 68px 44px;
+  gap: 8px;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px 10px;
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.10);
+}
+
+.rank {
+  font-weight: 800;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+.who {
+  font-weight: 700;
+}
+
+.pts {
+  text-align: right;
+  font-weight: 800;
+}
+
+.lvl {
+  text-align: right;
+  font-weight: 700;
+  color: rgba(17, 24, 39, 0.65);
+}
+
+.muted {
+  color: rgba(17, 24, 39, 0.60);
+  font-size: 13px;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.tips {
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  padding-top: 12px;
+}
+
+.tipTitle {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(17, 24, 39, 0.75);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+  .hud {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}
