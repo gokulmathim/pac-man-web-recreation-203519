@@ -1,1 +1,3 @@
-# pac-man-web-recreation-203519
+# Project Repository
+
+This is the initial README file for the project.
